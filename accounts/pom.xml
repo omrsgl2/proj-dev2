@@ -10,7 +10,7 @@
     <artifactId>accounts</artifactId>
     <packaging>jar</packaging>
     <name>accounts</name>
-    <version>2.00.00</version>
+    <version>1.00.00</version>
     <prerequisites>
         <maven>2.2.0</maven>
     </prerequisites>
