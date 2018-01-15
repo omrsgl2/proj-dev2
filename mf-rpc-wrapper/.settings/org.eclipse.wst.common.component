@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="openlegacy-orchestration-rest-new">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <dependent-module archiveName="openlegacy-impl-3.6.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/openlegacy-impl/openlegacy-impl">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="openlegacy-common-3.6.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/openlegacy-common/openlegacy-common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="openlegacy-utils-3.6.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/openlegacy-utils/openlegacy-utils">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="openlegacy-api-3.6.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/openlegacy-api/openlegacy-api">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="openlegacy-web-3.6.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/openlegacy-web/openlegacy-web">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="management-plugin-3.6.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/management-plugin/management-plugin">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="openlegacy-swagger-3.6.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/openlegacy-swagger/openlegacy-swagger">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/openlegacy-orchestration-rest-new/target/classes"/>
+        <property name="context-root" value="openlegacy-orchestration-rest-new"/>
+    </wb-module>
+</project-modules>

@@ -1,0 +1,11 @@
+ol:
+  config:
+    apiPackage: com.mfrpc.openlegacy
+    apiSourceFolder: src/main/java
+    backendSolution: mf-rpc
+    designtimeContext: default
+    frontendSolution: java
+    generateTest: false
+    openInEditor: false
+    provider: openlegacy-rpc-mf
+    webPackage: com.mfrpc.openlegacy.web

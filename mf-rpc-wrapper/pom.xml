@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+        xmlns="http://maven.apache.org/POM/4.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>mf-rpc-wrapper</groupId>
+    <artifactId>mf-rpc-wrapper</artifactId>
+    <version>0.1</version>
+    <name>mf-rpc-wrapper</name>
+    <packaging>jar</packaging>
+
+    <parent>
+        <groupId>org.openlegacy</groupId>
+        <artifactId>openlegacy-dependencies-manager</artifactId>
+        <version>4.0.1-RELEASE</version>
+        <relativePath />
+    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
+    <dependencies>
+        <!-- Spring -->
+        <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+        <!-- <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency> -->
+        <!-- OpenLegacy.Security -->
+        <!-- <dependency>
+            <groupId>org.openlegacy</groupId>
+            <artifactId>openlegacy-oauth2</artifactId>
+            <version>${openlegacy.version}</version>
+        </dependency> -->
+        <!-- OpenLegacy -->
+        <!-- <dependency>
+            <groupId>org.openlegacy</groupId>
+            <artifactId>openlegacy-web</artifactId>
+            <version>${openlegacy.version}</version>
+        </dependency> -->
+        <!-- Validation -->
+		<dependency>
+			<groupId>org.hibernate.validator</groupId>
+			<artifactId>hibernate-validator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+		</dependency>
+        <dependency>
+            <groupId>com.openlegacy.enterprise.plugins</groupId>
+            <artifactId>management-plugin</artifactId>
+            <version>${openlegacy.version}</version>
+            <exclusions>
+                <exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.openlegacy</groupId>
+					<artifactId>openlegacy-datasource</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-web</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-tomcat</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework.security</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework.security.oauth</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
+            </exclusions>
+        </dependency>
+        <!-- <dependency>
+            <groupId>org.openlegacy</groupId>
+            <artifactId>openlegacy-swagger</artifactId>
+            <version>${openlegacy.version}</version>
+        </dependency> -->
+        <!-- OpenLegacy.Cache -->
+        <!-- <dependency>
+            <groupId>org.openlegacy.cache</groupId>
+            <artifactId>openlegacy-cache-ehcache</artifactId>
+            <version>${openlegacy.version}</version>
+        </dependency> -->
+        <!-- OpenLegacy.SDK -->
+        <dependency>
+            <groupId>mf-rpc</groupId>
+            <artifactId>mf-rpc</artifactId>
+            <version>0.1</version>
+        </dependency>
+        <!-- H2 -->
+        <!-- <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+        </dependency> -->
+        <!-- Test -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!-- <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-test</artifactId>
+            <scope>test</scope>
+        </dependency> -->
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <useIncrementalCompilation>false</useIncrementalCompilation>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.openlegacy.tools</groupId>
+                <artifactId>openlegacy-maven-plugin</artifactId>
+                <version>${openlegacy.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.openlegacy.tools</groupId>
+                <artifactId>openlegacy-connector-tool-maven-plugin</artifactId>
+                <version>${openlegacy.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

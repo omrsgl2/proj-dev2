@@ -1,0 +1,10 @@
+# Default configuration to work in development environment.
+# Disables oauth2 security.
+spring:
+  profiles:
+    active: dev
+
+ol:
+  oauth:
+    client:
+      ignored: /**

@@ -1,0 +1,56 @@
+# Logging #
+#logging:
+#  level:
+#    org:
+#      openlegacy: debug
+
+# Security #
+security:
+  # Spring security OAuth2 configuration #
+  oauth2:
+    resource:
+      filter-order: 3
+
+# Springfox #
+springfox:
+  documentation:
+    swagger:
+      v2:
+        path: /swagger/swagger.json
+
+# Openlegacy #
+ol:
+  # Openlegacy Common Properties (OLCommonProperties) #
+  common:
+    user-properties-folder-name: mf-rpc-wrapper
+    cache:
+      enabled: true
+
+---
+
+# mfRpc
+ol:
+  # Openlegacy Common Properties (OLCommonProperties) #
+  common:
+    right-to-left: false
+    project:
+      mfRpc:
+        live-session: true
+        trail-path: /trails/mf-rpc.trail
+        cache:
+          enabled: true
+  # Openlegacy CICS Properties (CicsProperties) #
+  cics:
+    project:
+      mfRpc:
+       # base-url: http://192.86.32.142
+       # port: 12345
+       # uri-map: oldist3
+        base-url: http://localhost
+        port: 9191
+        uri-map: 
+        code-page: CP037
+
+
+
+

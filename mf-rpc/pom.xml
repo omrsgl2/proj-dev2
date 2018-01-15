@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+        xmlns="http://maven.apache.org/POM/4.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>mf-rpc</groupId>
+    <artifactId>mf-rpc</artifactId>
+    <version>0.1</version>
+    <name>mf-rpc</name>
+
+    <parent>
+        <groupId>org.openlegacy</groupId>
+        <artifactId>openlegacy-dependencies-manager</artifactId>
+        <version>4.0.1-RELEASE</version>
+        <relativePath />
+    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
+    <dependencies>
+        <!-- Spring -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <!-- OpenLegacy -->
+        <dependency>
+            <groupId>org.openlegacy.providers</groupId>
+            <artifactId>openlegacy-rpc-mf</artifactId>
+            <version>${openlegacy.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openlegacy.designtime</groupId>
+            <artifactId>openlegacy-designtime</artifactId>
+            <version>${openlegacy.version}</version>
+            <optional>true</optional>
+        </dependency>
+        <!--OpenLegacy.Lombok -->
+        <dependency>
+            <groupId>org.openlegacy</groupId>
+            <artifactId>openlegacy-lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <!-- OpenLegacy.Cache -->
+        <dependency>
+            <groupId>org.openlegacy.cache</groupId>
+            <artifactId>openlegacy-cache-ehcache</artifactId>
+            <version>${openlegacy.version}</version>
+        </dependency>
+        <!-- H2.DB -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+        </dependency>
+        <!-- Test.Spring -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <useIncrementalCompilation>false</useIncrementalCompilation>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.openlegacy.tools</groupId>
+                <artifactId>openlegacy-maven-plugin</artifactId>
+                <version>${openlegacy.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.openlegacy.tools</groupId>
+                <artifactId>openlegacy-connector-tool-maven-plugin</artifactId>
+                <version>${openlegacy.version}</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>

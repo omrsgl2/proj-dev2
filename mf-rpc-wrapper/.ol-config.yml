@@ -1,0 +1,10 @@
+ol:
+  config:
+    apiPackage: com.mf_rpc_wrapper.openlegacy
+    apiSourceFolder: src/main/java
+    backendSolution: orchestration
+    designtimeContext: default
+    frontendSolution: orchestration-rest
+    referredProjects:
+    - mf-rpc
+    webPackage: com.mf_rpc_wrapper.openlegacy.web
